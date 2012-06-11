@@ -19,7 +19,7 @@
 
 @synthesize allDevices = _allDevices;
 
-static NSDictionary *s_peopleByDevice;
+static NSMutableDictionary *s_peopleByDevice;
 
 - (id)init
 {
@@ -28,14 +28,7 @@ static NSDictionary *s_peopleByDevice;
         
         if(nil == s_peopleByDevice)
         {
-            s_peopleByDevice = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                @"Erik", @"44:a7:cf:7b:49:b0:cd",
-                                @"Casey", @"5c:da:d4:2d:b3:72",
-                                @"Mario", @"0:23:76:ad:63:1a",
-                                @"Bruce", @"14:5a:5:30:1a:c8",
-                                @"Taylor", @"90:27:e4:5a:8:77",
-                                @"George", @"90:27:e4:d:60:c2",
-                                @"Bryce", @"c:74:c2:db:3e:b0", nil];
+            s_peopleByDevice = [[NSMutableDictionary alloc] init];
         }
         
          _sniffer = [PacketSniffer sharedSniffer];
