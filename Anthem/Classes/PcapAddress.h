@@ -9,12 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface PcapAddress : NSObject {
-    NSString *_MACAddress;
-    NSString *_ip;
-    NSDate *_lastSeenAt;
-    NSDate *_firstSeenAt;
-}
+@interface PcapAddress : NSObject
 
 @property (nonatomic, retain) NSString *MACAddress;
 @property (nonatomic, retain) NSString *ip;

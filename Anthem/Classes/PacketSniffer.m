@@ -8,6 +8,15 @@
 
 #import "PacketSniffer.h"
 
+@interface PacketSniffer ()
+{
+    BOOL _isListening;
+    pcap_t *pcap_handle;
+    dispatch_queue_t _listeningQueue;
+}
+
+@end
+
 @implementation PacketSniffer
 
 @synthesize delegate;
@@ -51,11 +60,6 @@ static PacketSniffer* s_sharedSniffer = nil;
     return self;
 }
 
-- (void)dealloc
-{
-    [super dealloc];
-}
-
 void gotPacket(u_char *args, const struct pcap_pkthdr *header, const u_char *packet)
 {
     PcapPacket *pcapPacket = [[[PcapPacket alloc] initWithPacket:packet] autorelease];
@@ -87,7 +91,10 @@ void gotPacket(u_char *args, const struct pcap_pkthdr *header, const u_char *pac
             else
             {
                 NSString *errorString = [NSString stringWithCString:errbuf encoding:NSASCIIStringEncoding];
-                *error = [NSError errorWithDomain:@"PCAPError" code:100 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:errorString,@"ErrorMessage", nil]];
+                if(error != NULL)
+                {
+                    *error = [NSError errorWithDomain:@"PCAPError" code:100 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:errorString,NSLocalizedDescriptionKey, nil]];
+                }
                 return NO;
             }             
         

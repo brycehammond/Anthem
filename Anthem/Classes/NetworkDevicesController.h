@@ -10,13 +10,7 @@
 #import "PacketSniffer.h"
 
 @interface NetworkDevicesController : NSObject <PacketSnifferDelegate> 
-{
-    PacketSniffer *_sniffer; //weak
-    
-    IBOutlet NSMutableArray *_allDevices;
-        
-}
 
-@property (nonatomic, retain) NSMutableArray *allDevices;
+@property (nonatomic, retain) IBOutlet NSMutableArray *allDevices;
 
 @end

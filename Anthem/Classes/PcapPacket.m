@@ -69,24 +69,15 @@
         [address setIp:sourceIP];
         [address setMACAddress:sourceMAC];
         [self setSourceAddress:address];
-        [address release];
         
         address = [[PcapAddress alloc] init];
         [address setIp:destIP];
         [address setMACAddress:destMAC];
         [self setDestinationAddress:address];
-        [address release];
         
     }
     
     return self;
-}
-
-- (void)dealloc
-{
-    [_destinationAddress release];
-    [_sourceAddress release];
-    [super dealloc];
 }
 
 @end

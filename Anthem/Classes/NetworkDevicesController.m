@@ -8,7 +8,10 @@
 
 #import "NetworkDevicesController.h"
 
-@interface NetworkDevicesController (Private)
+@interface NetworkDevicesController ()
+{
+    __weak PacketSniffer *_sniffer;
+}
 
 - (void)addDevice:(PcapAddress *)deviceAddress;
 - (void)setPersonForDeviceAddress:(PcapAddress *)deviceAddress;
@@ -51,7 +54,6 @@ static NSMutableDictionary *s_peopleByDevice;
 - (void)dealloc
 {
     [_sniffer stopListening:nil];
-    [super dealloc];
 }
 
 - (void)packetSniffer:(PacketSniffer *)sniffer

@@ -27,15 +27,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [_ip release];
-    [_MACAddress release];
-    [_lastSeenAt release];
-    [_firstSeenAt release];
-    [super dealloc];
-}
-
 - (BOOL)isEqual:(PcapAddress *)object
 {
     return ([[object MACAddress] caseInsensitiveCompare:[self MACAddress]] == NSOrderedSame);

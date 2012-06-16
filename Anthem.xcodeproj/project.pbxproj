@@ -7,135 +7,143 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02BA7BB813BD799B00043EF2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA7BB713BD799B00043EF2 /* Cocoa.framework */; };
-		02BA7BC213BD799B00043EF2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02BA7BC013BD799B00043EF2 /* InfoPlist.strings */; };
-		02BA7BC513BD799B00043EF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA7BC413BD799B00043EF2 /* main.m */; };
-		02BA7BC813BD799B00043EF2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 02BA7BC613BD799B00043EF2 /* Credits.rtf */; };
-		02BA7BCB13BD799B00043EF2 /* AnthemAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA7BCA13BD799B00043EF2 /* AnthemAppDelegate.m */; };
-		02BA7BCE13BD799C00043EF2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02BA7BCC13BD799C00043EF2 /* MainMenu.xib */; };
-		02BA7BD513BD79BC00043EF2 /* libpcap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BA7BD413BD79BC00043EF2 /* libpcap.dylib */; };
-		02BA7BD813BD79FB00043EF2 /* PcapPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA7BD713BD79FB00043EF2 /* PcapPacket.m */; };
-		02BA7BDB13BD7AE400043EF2 /* PacketSniffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA7BDA13BD7AE400043EF2 /* PacketSniffer.m */; };
-		02BA7BDE13BDA46F00043EF2 /* PcapAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA7BDD13BDA46F00043EF2 /* PcapAddress.m */; };
-		02BA7BE113BDA9A300043EF2 /* NetworkDevicesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BA7BE013BDA9A300043EF2 /* NetworkDevicesController.m */; };
+		023899D6158C0D9C00CE38E7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023899D5158C0D9C00CE38E7 /* Cocoa.framework */; };
+		023899E0158C0D9C00CE38E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 023899DE158C0D9C00CE38E7 /* InfoPlist.strings */; };
+		023899E6158C0D9C00CE38E7 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 023899E4158C0D9C00CE38E7 /* Credits.rtf */; };
+		023899EC158C0D9C00CE38E7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023899EA158C0D9C00CE38E7 /* MainMenu.xib */; };
+		023899FB158C494800CE38E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 023899F9158C494800CE38E7 /* main.m */; };
+		02389A05158C49C400CE38E7 /* NetworkDevicesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 023899FE158C49C400CE38E7 /* NetworkDevicesController.m */; };
+		02389A06158C49C400CE38E7 /* PacketSniffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02389A00158C49C400CE38E7 /* PacketSniffer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		02389A07158C49C400CE38E7 /* PcapAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 02389A02158C49C400CE38E7 /* PcapAddress.m */; };
+		02389A08158C49C400CE38E7 /* PcapPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 02389A04158C49C400CE38E7 /* PcapPacket.m */; };
+		02389A0B158C49D100CE38E7 /* AnthemAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02389A0A158C49D100CE38E7 /* AnthemAppDelegate.m */; };
+		02389A16158C4DBD00CE38E7 /* libpcap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 02389A15158C4DBC00CE38E7 /* libpcap.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		02BA7BB313BD799B00043EF2 /* Anthem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anthem.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		02BA7BB713BD799B00043EF2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		02BA7BBA13BD799B00043EF2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		02BA7BBB13BD799B00043EF2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		02BA7BBC13BD799B00043EF2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		02BA7BBF13BD799B00043EF2 /* Anthem-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Anthem-Info.plist"; sourceTree = "<group>"; };
-		02BA7BC113BD799B00043EF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		02BA7BC313BD799B00043EF2 /* Anthem-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Anthem-Prefix.pch"; sourceTree = "<group>"; };
-		02BA7BC413BD799B00043EF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		02BA7BC713BD799B00043EF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		02BA7BC913BD799B00043EF2 /* AnthemAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnthemAppDelegate.h; sourceTree = "<group>"; };
-		02BA7BCA13BD799B00043EF2 /* AnthemAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnthemAppDelegate.m; sourceTree = "<group>"; };
-		02BA7BCD13BD799C00043EF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		02BA7BD413BD79BC00043EF2 /* libpcap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcap.dylib; path = usr/lib/libpcap.dylib; sourceTree = SDKROOT; };
-		02BA7BD613BD79FB00043EF2 /* PcapPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PcapPacket.h; sourceTree = "<group>"; };
-		02BA7BD713BD79FB00043EF2 /* PcapPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PcapPacket.m; sourceTree = "<group>"; };
-		02BA7BD913BD7AE400043EF2 /* PacketSniffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PacketSniffer.h; sourceTree = "<group>"; };
-		02BA7BDA13BD7AE400043EF2 /* PacketSniffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PacketSniffer.m; sourceTree = "<group>"; };
-		02BA7BDC13BDA46F00043EF2 /* PcapAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PcapAddress.h; sourceTree = "<group>"; };
-		02BA7BDD13BDA46F00043EF2 /* PcapAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PcapAddress.m; sourceTree = "<group>"; };
-		02BA7BDF13BDA9A300043EF2 /* NetworkDevicesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkDevicesController.h; sourceTree = "<group>"; };
-		02BA7BE013BDA9A300043EF2 /* NetworkDevicesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkDevicesController.m; sourceTree = "<group>"; };
+		023899D1158C0D9C00CE38E7 /* Anthem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anthem.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		023899D5158C0D9C00CE38E7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		023899D8158C0D9C00CE38E7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		023899D9158C0D9C00CE38E7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		023899DA158C0D9C00CE38E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		023899DF158C0D9C00CE38E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		023899E5158C0D9C00CE38E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		023899EB158C0D9C00CE38E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		023899F7158C494800CE38E7 /* Anthem-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Anthem-Info.plist"; path = "App Resources/Anthem-Info.plist"; sourceTree = "<group>"; };
+		023899F8158C494800CE38E7 /* Anthem-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Anthem-Prefix.pch"; path = "App Resources/Anthem-Prefix.pch"; sourceTree = "<group>"; };
+		023899F9158C494800CE38E7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "App Resources/main.m"; sourceTree = "<group>"; };
+		023899FD158C49C400CE38E7 /* NetworkDevicesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkDevicesController.h; path = Classes/NetworkDevicesController.h; sourceTree = "<group>"; };
+		023899FE158C49C400CE38E7 /* NetworkDevicesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkDevicesController.m; path = Classes/NetworkDevicesController.m; sourceTree = "<group>"; };
+		023899FF158C49C400CE38E7 /* PacketSniffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PacketSniffer.h; path = Classes/PacketSniffer.h; sourceTree = "<group>"; };
+		02389A00158C49C400CE38E7 /* PacketSniffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PacketSniffer.m; path = Classes/PacketSniffer.m; sourceTree = "<group>"; };
+		02389A01158C49C400CE38E7 /* PcapAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PcapAddress.h; path = Classes/PcapAddress.h; sourceTree = "<group>"; };
+		02389A02158C49C400CE38E7 /* PcapAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PcapAddress.m; path = Classes/PcapAddress.m; sourceTree = "<group>"; };
+		02389A03158C49C400CE38E7 /* PcapPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PcapPacket.h; path = Classes/PcapPacket.h; sourceTree = "<group>"; };
+		02389A04158C49C400CE38E7 /* PcapPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PcapPacket.m; path = Classes/PcapPacket.m; sourceTree = "<group>"; };
+		02389A09158C49D100CE38E7 /* AnthemAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnthemAppDelegate.h; path = Classes/AnthemAppDelegate.h; sourceTree = "<group>"; };
+		02389A0A158C49D100CE38E7 /* AnthemAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnthemAppDelegate.m; path = Classes/AnthemAppDelegate.m; sourceTree = "<group>"; };
+		02389A15158C4DBC00CE38E7 /* libpcap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcap.dylib; path = usr/lib/libpcap.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		02BA7BB013BD799B00043EF2 /* Frameworks */ = {
+		023899CE158C0D9C00CE38E7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02BA7BD513BD79BC00043EF2 /* libpcap.dylib in Frameworks */,
-				02BA7BB813BD799B00043EF2 /* Cocoa.framework in Frameworks */,
+				02389A16158C4DBD00CE38E7 /* libpcap.dylib in Frameworks */,
+				023899D6158C0D9C00CE38E7 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02BA7BA813BD799B00043EF2 = {
+		023899C6158C0D9B00CE38E7 = {
 			isa = PBXGroup;
 			children = (
-				02BA7BBD13BD799B00043EF2 /* Anthem */,
-				02BA7BB613BD799B00043EF2 /* Frameworks */,
-				02BA7BB413BD799B00043EF2 /* Products */,
+				023899DB158C0D9C00CE38E7 /* Anthem */,
+				023899D4158C0D9C00CE38E7 /* Frameworks */,
+				023899D2158C0D9C00CE38E7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		02BA7BB413BD799B00043EF2 /* Products */ = {
+		023899D2158C0D9C00CE38E7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				02BA7BB313BD799B00043EF2 /* Anthem.app */,
+				023899D1158C0D9C00CE38E7 /* Anthem.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		02BA7BB613BD799B00043EF2 /* Frameworks */ = {
+		023899D4158C0D9C00CE38E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				02BA7BD413BD79BC00043EF2 /* libpcap.dylib */,
-				02BA7BB713BD799B00043EF2 /* Cocoa.framework */,
-				02BA7BB913BD799B00043EF2 /* Other Frameworks */,
+				02389A15158C4DBC00CE38E7 /* libpcap.dylib */,
+				023899D5158C0D9C00CE38E7 /* Cocoa.framework */,
+				023899D7158C0D9C00CE38E7 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		02BA7BB913BD799B00043EF2 /* Other Frameworks */ = {
+		023899D7158C0D9C00CE38E7 /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				02BA7BBA13BD799B00043EF2 /* AppKit.framework */,
-				02BA7BBB13BD799B00043EF2 /* CoreData.framework */,
-				02BA7BBC13BD799B00043EF2 /* Foundation.framework */,
+				023899D8158C0D9C00CE38E7 /* AppKit.framework */,
+				023899D9158C0D9C00CE38E7 /* CoreData.framework */,
+				023899DA158C0D9C00CE38E7 /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		02BA7BBD13BD799B00043EF2 /* Anthem */ = {
+		023899DB158C0D9C00CE38E7 /* Anthem */ = {
 			isa = PBXGroup;
 			children = (
-				02BA7BC913BD799B00043EF2 /* AnthemAppDelegate.h */,
-				02BA7BCA13BD799B00043EF2 /* AnthemAppDelegate.m */,
-				02BA7BCC13BD799C00043EF2 /* MainMenu.xib */,
-				02BA7BBE13BD799B00043EF2 /* Supporting Files */,
-				02BA7BD613BD79FB00043EF2 /* PcapPacket.h */,
-				02BA7BD713BD79FB00043EF2 /* PcapPacket.m */,
-				02BA7BD913BD7AE400043EF2 /* PacketSniffer.h */,
-				02BA7BDA13BD7AE400043EF2 /* PacketSniffer.m */,
-				02BA7BDC13BDA46F00043EF2 /* PcapAddress.h */,
-				02BA7BDD13BDA46F00043EF2 /* PcapAddress.m */,
-				02BA7BDF13BDA9A300043EF2 /* NetworkDevicesController.h */,
-				02BA7BE013BDA9A300043EF2 /* NetworkDevicesController.m */,
+				02389A09158C49D100CE38E7 /* AnthemAppDelegate.h */,
+				02389A0A158C49D100CE38E7 /* AnthemAppDelegate.m */,
+				023899FC158C499700CE38E7 /* Network */,
+				023899EA158C0D9C00CE38E7 /* MainMenu.xib */,
+				023899DC158C0D9C00CE38E7 /* Supporting Files */,
 			);
 			path = Anthem;
 			sourceTree = "<group>";
 		};
-		02BA7BBE13BD799B00043EF2 /* Supporting Files */ = {
+		023899DC158C0D9C00CE38E7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				02BA7BBF13BD799B00043EF2 /* Anthem-Info.plist */,
-				02BA7BC013BD799B00043EF2 /* InfoPlist.strings */,
-				02BA7BC313BD799B00043EF2 /* Anthem-Prefix.pch */,
-				02BA7BC413BD799B00043EF2 /* main.m */,
-				02BA7BC613BD799B00043EF2 /* Credits.rtf */,
+				023899F7158C494800CE38E7 /* Anthem-Info.plist */,
+				023899F8158C494800CE38E7 /* Anthem-Prefix.pch */,
+				023899F9158C494800CE38E7 /* main.m */,
+				023899DE158C0D9C00CE38E7 /* InfoPlist.strings */,
+				023899E4158C0D9C00CE38E7 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		023899FC158C499700CE38E7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				023899FD158C49C400CE38E7 /* NetworkDevicesController.h */,
+				023899FE158C49C400CE38E7 /* NetworkDevicesController.m */,
+				023899FF158C49C400CE38E7 /* PacketSniffer.h */,
+				02389A00158C49C400CE38E7 /* PacketSniffer.m */,
+				02389A01158C49C400CE38E7 /* PcapAddress.h */,
+				02389A02158C49C400CE38E7 /* PcapAddress.m */,
+				02389A03158C49C400CE38E7 /* PcapPacket.h */,
+				02389A04158C49C400CE38E7 /* PcapPacket.m */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		02BA7BB213BD799B00043EF2 /* Anthem */ = {
+		023899D0158C0D9C00CE38E7 /* Anthem */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02BA7BD113BD799C00043EF2 /* Build configuration list for PBXNativeTarget "Anthem" */;
+			buildConfigurationList = 023899EF158C0D9C00CE38E7 /* Build configuration list for PBXNativeTarget "Anthem" */;
 			buildPhases = (
-				02BA7BAF13BD799B00043EF2 /* Sources */,
-				02BA7BB013BD799B00043EF2 /* Frameworks */,
-				02BA7BB113BD799B00043EF2 /* Resources */,
+				023899CD158C0D9C00CE38E7 /* Sources */,
+				023899CE158C0D9C00CE38E7 /* Frameworks */,
+				023899CF158C0D9C00CE38E7 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -143,84 +151,85 @@
 			);
 			name = Anthem;
 			productName = Anthem;
-			productReference = 02BA7BB313BD799B00043EF2 /* Anthem.app */;
+			productReference = 023899D1158C0D9C00CE38E7 /* Anthem.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		02BA7BAA13BD799B00043EF2 /* Project object */ = {
+		023899C8158C0D9B00CE38E7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Imulus, LLC";
 			};
-			buildConfigurationList = 02BA7BAD13BD799B00043EF2 /* Build configuration list for PBXProject "Anthem" */;
+			buildConfigurationList = 023899CB158C0D9B00CE38E7 /* Build configuration list for PBXProject "Anthem" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 02BA7BA813BD799B00043EF2;
-			productRefGroup = 02BA7BB413BD799B00043EF2 /* Products */;
+			mainGroup = 023899C6158C0D9B00CE38E7;
+			productRefGroup = 023899D2158C0D9C00CE38E7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				02BA7BB213BD799B00043EF2 /* Anthem */,
+				023899D0158C0D9C00CE38E7 /* Anthem */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		02BA7BB113BD799B00043EF2 /* Resources */ = {
+		023899CF158C0D9C00CE38E7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02BA7BC213BD799B00043EF2 /* InfoPlist.strings in Resources */,
-				02BA7BC813BD799B00043EF2 /* Credits.rtf in Resources */,
-				02BA7BCE13BD799C00043EF2 /* MainMenu.xib in Resources */,
+				023899E0158C0D9C00CE38E7 /* InfoPlist.strings in Resources */,
+				023899E6158C0D9C00CE38E7 /* Credits.rtf in Resources */,
+				023899EC158C0D9C00CE38E7 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		02BA7BAF13BD799B00043EF2 /* Sources */ = {
+		023899CD158C0D9C00CE38E7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02BA7BC513BD799B00043EF2 /* main.m in Sources */,
-				02BA7BCB13BD799B00043EF2 /* AnthemAppDelegate.m in Sources */,
-				02BA7BD813BD79FB00043EF2 /* PcapPacket.m in Sources */,
-				02BA7BDB13BD7AE400043EF2 /* PacketSniffer.m in Sources */,
-				02BA7BDE13BDA46F00043EF2 /* PcapAddress.m in Sources */,
-				02BA7BE113BDA9A300043EF2 /* NetworkDevicesController.m in Sources */,
+				023899FB158C494800CE38E7 /* main.m in Sources */,
+				02389A05158C49C400CE38E7 /* NetworkDevicesController.m in Sources */,
+				02389A06158C49C400CE38E7 /* PacketSniffer.m in Sources */,
+				02389A07158C49C400CE38E7 /* PcapAddress.m in Sources */,
+				02389A08158C49C400CE38E7 /* PcapPacket.m in Sources */,
+				02389A0B158C49D100CE38E7 /* AnthemAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		02BA7BC013BD799B00043EF2 /* InfoPlist.strings */ = {
+		023899DE158C0D9C00CE38E7 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				02BA7BC113BD799B00043EF2 /* en */,
+				023899DF158C0D9C00CE38E7 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		02BA7BC613BD799B00043EF2 /* Credits.rtf */ = {
+		023899E4158C0D9C00CE38E7 /* Credits.rtf */ = {
 			isa = PBXVariantGroup;
 			children = (
-				02BA7BC713BD799B00043EF2 /* en */,
+				023899E5158C0D9C00CE38E7 /* en */,
 			);
 			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
-		02BA7BCC13BD799C00043EF2 /* MainMenu.xib */ = {
+		023899EA158C0D9C00CE38E7 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				02BA7BCD13BD799C00043EF2 /* en */,
+				023899EB158C0D9C00CE38E7 /* en */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -228,63 +237,70 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		02BA7BCF13BD799C00043EF2 /* Debug */ = {
+		023899ED158C0D9C00CE38E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
-		02BA7BD013BD799C00043EF2 /* Release */ = {
+		023899EE158C0D9C00CE38E7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};
 			name = Release;
 		};
-		02BA7BD213BD799C00043EF2 /* Debug */ = {
+		023899F0158C0D9C00CE38E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Anthem/Anthem-Prefix.pch";
-				INFOPLIST_FILE = "Anthem/Anthem-Info.plist";
+				GCC_PREFIX_HEADER = "Anthem/App Resources/Anthem-Prefix.pch";
+				INFOPLIST_FILE = "Anthem/App Resources/Anthem-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		02BA7BD313BD799C00043EF2 /* Release */ = {
+		023899F1158C0D9C00CE38E7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Anthem/Anthem-Prefix.pch";
-				INFOPLIST_FILE = "Anthem/Anthem-Info.plist";
+				GCC_PREFIX_HEADER = "Anthem/App Resources/Anthem-Prefix.pch";
+				INFOPLIST_FILE = "Anthem/App Resources/Anthem-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -293,24 +309,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		02BA7BAD13BD799B00043EF2 /* Build configuration list for PBXProject "Anthem" */ = {
+		023899CB158C0D9B00CE38E7 /* Build configuration list for PBXProject "Anthem" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				02BA7BCF13BD799C00043EF2 /* Debug */,
-				02BA7BD013BD799C00043EF2 /* Release */,
+				023899ED158C0D9C00CE38E7 /* Debug */,
+				023899EE158C0D9C00CE38E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02BA7BD113BD799C00043EF2 /* Build configuration list for PBXNativeTarget "Anthem" */ = {
+		023899EF158C0D9C00CE38E7 /* Build configuration list for PBXNativeTarget "Anthem" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				02BA7BD213BD799C00043EF2 /* Debug */,
-				02BA7BD313BD799C00043EF2 /* Release */,
+				023899F0158C0D9C00CE38E7 /* Debug */,
+				023899F1158C0D9C00CE38E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 02BA7BAA13BD799B00043EF2 /* Project object */;
+	rootObject = 023899C8158C0D9B00CE38E7 /* Project object */;
 }

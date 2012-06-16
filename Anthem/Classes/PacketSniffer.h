@@ -19,14 +19,7 @@
 
 @end
 
-@interface PacketSniffer : NSObject {
-
-@private
-    BOOL _isListening;
-    pcap_t *pcap_handle;
-    dispatch_queue_t _listeningQueue;
-    
-}
+@interface PacketSniffer : NSObject 
 
 @property (nonatomic, assign) NSObject<PacketSnifferDelegate> *delegate;
 

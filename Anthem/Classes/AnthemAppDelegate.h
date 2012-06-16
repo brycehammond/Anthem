@@ -1,3 +1,4 @@
+
 //
 //  AnthemAppDelegate.h
 //  Anthem
@@ -8,10 +9,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AnthemAppDelegate : NSObject <NSApplicationDelegate> {
-@private
-    NSWindow *window;
-}
+@interface AnthemAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 
