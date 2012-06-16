@@ -79,10 +79,7 @@ static NSMutableDictionary *s_peopleByDevice;
         [deviceAddress setFirstSeenAt:currentTime];
         [self setPersonForDeviceAddress:deviceAddress];
         
-        if(nil != [deviceAddress person])
-        {
-            [[self allDevices] addObject:deviceAddress];
-        }
+        [[self allDevices] addObject:deviceAddress];
         
     }
     else
