@@ -12,4 +12,14 @@
 
 @synthesize configurations = _configurations;
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        [self setConfigurations:[NSMutableArray array]];
+    }
+    
+    return self;
+}
+
 @end

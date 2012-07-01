@@ -19,13 +19,13 @@
 		02389A0B158C49D100CE38E7 /* AnthemAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02389A0A158C49D100CE38E7 /* AnthemAppDelegate.m */; };
 		02389A16158C4DBD00CE38E7 /* libpcap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 02389A15158C4DBC00CE38E7 /* libpcap.dylib */; };
 		026B662615A0B5DA00991161 /* ConfigurationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026B662515A0B5DA00991161 /* ConfigurationController.m */; };
+		02FDC85B15A0D926007F7BC7 /* PersonConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FDC85A15A0D926007F7BC7 /* PersonConfiguration.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		023899D1158C0D9C00CE38E7 /* Anthem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anthem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		023899D5158C0D9C00CE38E7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		023899D8158C0D9C00CE38E7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		023899D9158C0D9C00CE38E7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		023899DA158C0D9C00CE38E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		023899DF158C0D9C00CE38E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		023899E5158C0D9C00CE38E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
@@ -46,6 +46,8 @@
 		02389A15158C4DBC00CE38E7 /* libpcap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcap.dylib; path = usr/lib/libpcap.dylib; sourceTree = SDKROOT; };
 		026B662415A0B5DA00991161 /* ConfigurationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigurationController.h; path = Classes/ConfigurationController.h; sourceTree = "<group>"; };
 		026B662515A0B5DA00991161 /* ConfigurationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigurationController.m; path = Classes/ConfigurationController.m; sourceTree = "<group>"; };
+		02FDC85915A0D926007F7BC7 /* PersonConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonConfiguration.h; path = Classes/PersonConfiguration.h; sourceTree = "<group>"; };
+		02FDC85A15A0D926007F7BC7 /* PersonConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonConfiguration.m; path = Classes/PersonConfiguration.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				023899D8158C0D9C00CE38E7 /* AppKit.framework */,
-				023899D9158C0D9C00CE38E7 /* CoreData.framework */,
 				023899DA158C0D9C00CE38E7 /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
@@ -151,6 +152,8 @@
 			children = (
 				026B662415A0B5DA00991161 /* ConfigurationController.h */,
 				026B662515A0B5DA00991161 /* ConfigurationController.m */,
+				02FDC85915A0D926007F7BC7 /* PersonConfiguration.h */,
+				02FDC85A15A0D926007F7BC7 /* PersonConfiguration.m */,
 			);
 			name = Configurations;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				02389A08158C49C400CE38E7 /* PcapPacket.m in Sources */,
 				02389A0B158C49D100CE38E7 /* AnthemAppDelegate.m in Sources */,
 				026B662615A0B5DA00991161 /* ConfigurationController.m in Sources */,
+				02FDC85B15A0D926007F7BC7 /* PersonConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
