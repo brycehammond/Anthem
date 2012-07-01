@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ConfigurationController : NSObject
+@interface ConfigurationController : NSObject <NSTableViewDelegate>
 
 @property (nonatomic, retain) IBOutlet NSMutableArray *configurations;
 
