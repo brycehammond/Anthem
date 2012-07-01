@@ -18,6 +18,7 @@
 		02389A08158C49C400CE38E7 /* PcapPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 02389A04158C49C400CE38E7 /* PcapPacket.m */; };
 		02389A0B158C49D100CE38E7 /* AnthemAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02389A0A158C49D100CE38E7 /* AnthemAppDelegate.m */; };
 		02389A16158C4DBD00CE38E7 /* libpcap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 02389A15158C4DBC00CE38E7 /* libpcap.dylib */; };
+		026B662615A0B5DA00991161 /* ConfigurationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026B662515A0B5DA00991161 /* ConfigurationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		02389A09158C49D100CE38E7 /* AnthemAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnthemAppDelegate.h; path = Classes/AnthemAppDelegate.h; sourceTree = "<group>"; };
 		02389A0A158C49D100CE38E7 /* AnthemAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnthemAppDelegate.m; path = Classes/AnthemAppDelegate.m; sourceTree = "<group>"; };
 		02389A15158C4DBC00CE38E7 /* libpcap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcap.dylib; path = usr/lib/libpcap.dylib; sourceTree = SDKROOT; };
+		026B662415A0B5DA00991161 /* ConfigurationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigurationController.h; path = Classes/ConfigurationController.h; sourceTree = "<group>"; };
+		026B662515A0B5DA00991161 /* ConfigurationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigurationController.m; path = Classes/ConfigurationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +113,7 @@
 				02389A0A158C49D100CE38E7 /* AnthemAppDelegate.m */,
 				022E9EAD158D53C6004B2B45 /* NIBs */,
 				023899FC158C499700CE38E7 /* Network */,
-				026B662015A0A96100991161 /* Preferences */,
+				026B662015A0A96100991161 /* Configurations */,
 				023899DC158C0D9C00CE38E7 /* Supporting Files */,
 			);
 			path = Anthem;
@@ -143,11 +146,13 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
-		026B662015A0A96100991161 /* Preferences */ = {
+		026B662015A0A96100991161 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
+				026B662415A0B5DA00991161 /* ConfigurationController.h */,
+				026B662515A0B5DA00991161 /* ConfigurationController.m */,
 			);
-			name = Preferences;
+			name = Configurations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +225,7 @@
 				02389A07158C49C400CE38E7 /* PcapAddress.m in Sources */,
 				02389A08158C49C400CE38E7 /* PcapPacket.m in Sources */,
 				02389A0B158C49D100CE38E7 /* AnthemAppDelegate.m in Sources */,
+				026B662615A0B5DA00991161 /* ConfigurationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
