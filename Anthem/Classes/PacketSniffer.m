@@ -79,10 +79,11 @@ void gotPacket(u_char *args, const struct pcap_pkthdr *header, const u_char *pac
     {     
         
             char errbuf[PCAP_ERRBUF_SIZE];
-            
-            pcap_handle = pcap_open_live("en1", BUFSIZ, 1, 0, errbuf);
+    
+            pcap_handle = pcap_open_live("en1", BUFSIZ, 0, 512, errbuf);
             if(pcap_handle)
             {
+                pcap_set_rfmon(pcap_handle, 1);
                 dispatch_async(_listeningQueue, ^
                 {
                     pcap_loop(pcap_handle, -1, gotPacket, (u_char *)self);
