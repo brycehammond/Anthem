@@ -58,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		022E9EAD158D53C6004B2B45 /* NIBs */ = {
+			isa = PBXGroup;
+			children = (
+				023899EA158C0D9C00CE38E7 /* MainMenu.xib */,
+			);
+			name = NIBs;
+			sourceTree = "<group>";
+		};
 		023899C6158C0D9B00CE38E7 = {
 			isa = PBXGroup;
 			children = (
@@ -100,8 +108,9 @@
 			children = (
 				02389A09158C49D100CE38E7 /* AnthemAppDelegate.h */,
 				02389A0A158C49D100CE38E7 /* AnthemAppDelegate.m */,
+				022E9EAD158D53C6004B2B45 /* NIBs */,
 				023899FC158C499700CE38E7 /* Network */,
-				023899EA158C0D9C00CE38E7 /* MainMenu.xib */,
+				026B662015A0A96100991161 /* Preferences */,
 				023899DC158C0D9C00CE38E7 /* Supporting Files */,
 			);
 			path = Anthem;
@@ -132,6 +141,13 @@
 				02389A04158C49C400CE38E7 /* PcapPacket.m */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		026B662015A0A96100991161 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Preferences;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
