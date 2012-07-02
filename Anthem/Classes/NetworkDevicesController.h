@@ -10,9 +10,11 @@
 #import <pcap.h>
 #import "PacketSniffer.h"
 
+@class ConfigurationController;
 @interface NetworkDevicesController : NSObject <PacketSnifferDelegate> 
 
 @property (nonatomic, retain) IBOutlet NSMutableArray *allDevices;
 @property (nonatomic, retain) IBOutlet NSMutableArray *networkInterfaces;
+@property (nonatomic, weak) IBOutlet ConfigurationController *configurationController;
 
 @end

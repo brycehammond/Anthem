@@ -7,6 +7,8 @@
 //
 
 #import "NetworkDevicesController.h"
+#import "ConfigurationController.h"
+#import "PersonConfiguration.h"
 #import <pcap.h>
 
 @interface NetworkDevicesController ()
@@ -23,6 +25,7 @@
 
 @synthesize allDevices = _allDevices;
 @synthesize networkInterfaces = _networkInterfaces;
+@synthesize configurationController = _configurationController;
 
 - (id)init
 {
@@ -76,11 +79,10 @@
 {
     NSLog(@"dest %@ : %@", [[packet destinationAddress] MACAddress], [[packet destinationAddress] ip]);
     NSLog(@"src %@ : %@", [[packet sourceAddress] MACAddress], [[packet sourceAddress] ip]);
-    
+    [self willChangeValueForKey:@"allDevices"];
     [self addDevice:[packet sourceAddress]];
     [self addDevice:[packet destinationAddress]];
-    
-    [self setAllDevices:[self allDevices]];  //trigger KVO up in here
+    [self didChangeValueForKey:@"allDevices"];
 }
     
 - (void)addDevice:(PcapAddress *)deviceAddress
@@ -107,13 +109,14 @@
 
 - (void)setPersonForDeviceAddress:(PcapAddress *)deviceAddress
 {
-    /*
-    NSString *person = [s_peopleByDevice objectForKey:[[deviceAddress MACAddress] lowercaseString]];
-    if(nil != person)
+    //Get any configurations with the device address
+    NSPredicate *addressPredicate = [NSPredicate predicateWithFormat:@"%@ LIKE[c] macAddress"]; 
+    NSArray *configurations = [[self.configurationController configurations] filteredArrayUsingPredicate:addressPredicate];
+    
+    if([configurations count] > 0)
     {
-        [deviceAddress setPerson:person];
+        [deviceAddress setPerson:[[configurations objectAtIndex:0] name]];
     }
-     */
 }
 
 

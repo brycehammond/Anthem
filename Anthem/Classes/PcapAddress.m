@@ -27,6 +27,24 @@
     return self;
 }
 
+- (void)setMACAddress:(NSString *)MACAddress
+{
+    //0 prefixed values are stripped so add them back
+    NSArray *hexComponents = [MACAddress componentsSeparatedByString:@":"];
+    NSMutableArray *updatedComponents = [[NSMutableArray alloc] init];
+    for(NSString *component in hexComponents)
+    {
+        NSString *updatedComponent = component;
+        if([component length] == 1)
+        {
+            updatedComponent = [@"0" stringByAppendingString:component];
+        }
+        [updatedComponents addObject:updatedComponent];
+    }
+    
+    _MACAddress = [[updatedComponents componentsJoinedByString:@":"] uppercaseString];
+}
+
 - (BOOL)isEqual:(PcapAddress *)object
 {
     return ([[object MACAddress] caseInsensitiveCompare:[self MACAddress]] == NSOrderedSame);
