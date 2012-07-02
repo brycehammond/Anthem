@@ -8,15 +8,32 @@
 
 #import "AnthemAppDelegate.h"
 #import "PacketSniffer.h"
+#import "ConfigurationController.h"
 
 @implementation AnthemAppDelegate
 
 @synthesize window;
+@synthesize configController = _configController;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+        
+}
+
+- (void)applicationWillResignActive:(NSNotification *)notification
+{
     
-    
+}
+
+- (void)applicationWillTerminate:(NSNotification *)notification
+{
+    [self.configController saveConfigurations];
+}
+
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
+{
+    [window makeKeyAndOrderFront:self];
+    return YES;
 }
 
 @end

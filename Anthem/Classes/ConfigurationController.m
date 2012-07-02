@@ -16,7 +16,7 @@
     dispatch_queue_t _savingQueue;
 }
 
-- (void)saveConfigurations;
+
 
 @end
 
@@ -52,12 +52,17 @@
 
 - (void)saveConfigurations
 {
+    [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:self.configurations] 
+                                              forKey:kConfigDefaultsKey];
+}
+
+- (void)saveConfigurationsInBackground
+{
     //saves the current configurations to the 
     __weak ConfigurationController *weakSelf = self;
     
     dispatch_async(_savingQueue, ^{
-        [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:weakSelf.configurations] 
-                                                  forKey:kConfigDefaultsKey];
+        [weakSelf saveConfigurations];
     });
 }
 

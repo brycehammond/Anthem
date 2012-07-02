@@ -7,6 +7,7 @@
 //
 
 #import "NetworkDevicesController.h"
+#import <pcap.h>
 
 @interface NetworkDevicesController ()
 {
@@ -21,26 +22,40 @@
 @implementation NetworkDevicesController
 
 @synthesize allDevices = _allDevices;
-
-static NSMutableDictionary *s_peopleByDevice;
+@synthesize networkInterfaces = _networkInterfaces;
 
 - (id)init
 {
     self = [super init];
     if (self) {
         
-        if(nil == s_peopleByDevice)
-        {
-            s_peopleByDevice = [[NSMutableDictionary alloc] init];
-        }
-        
          _sniffer = [PacketSniffer sharedSniffer];
          [_sniffer setDelegate:self];
          [_sniffer startListening:nil];
         
-        [self setAllDevices:[NSMutableArray array]];
+        _networkInterfaces = [[NSMutableArray alloc] init];
         
+        pcap_if_t *alldevsp;       /* list of interfaces */
+        char errbuf[PCAP_ERRBUF_SIZE];
         
+        if (pcap_findalldevs (&alldevsp, errbuf) == 0)    
+        {
+            while (alldevsp != NULL)
+            {
+                NSString *deviceName = [NSString stringWithCString:alldevsp->name encoding:NSASCIIStringEncoding];
+                if([deviceName hasPrefix:@"en"])
+                {
+                    if(alldevsp->description != NULL)
+                    {
+                        NSLog(@"network interface: %@",[NSString stringWithCString:alldevsp->description encoding:NSASCIIStringEncoding]);
+                    }
+                    [_networkInterfaces addObject:deviceName];
+                }
+                alldevsp = alldevsp->next;
+            }
+        }
+        
+        [self setAllDevices:[NSMutableArray array]]; 
     }
     
     return self;
@@ -92,11 +107,13 @@ static NSMutableDictionary *s_peopleByDevice;
 
 - (void)setPersonForDeviceAddress:(PcapAddress *)deviceAddress
 {
+    /*
     NSString *person = [s_peopleByDevice objectForKey:[[deviceAddress MACAddress] lowercaseString]];
     if(nil != person)
     {
         [deviceAddress setPerson:person];
     }
+     */
 }
 
 

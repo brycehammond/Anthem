@@ -9,8 +9,10 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class ConfigurationController;
 @interface AnthemAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (nonatomic, weak) IBOutlet ConfigurationController *configController;
 
 @end
