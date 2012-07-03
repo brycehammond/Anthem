@@ -13,5 +13,7 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *macAddress;
 @property (nonatomic, strong) NSString *soundFilePath;
+@property (nonatomic, strong) NSDate *lastPlayedAt;
+@property (nonatomic, strong) NSDate *lastSeenAt;
 
 @end

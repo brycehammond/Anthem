@@ -144,7 +144,7 @@
 							<string key="NSName">_NSAppleMenu</string>
 						</object>
 					</object>
-					<object class="NSMenuItem" id="925469421">
+					<object class="NSMenuItem" id="834650732">
 						<reference key="NSMenu" ref="649796088"/>
 						<string key="NSTitle">Edit</string>
 						<string key="NSKeyEquiv"/>
@@ -152,12 +152,12 @@
 						<reference key="NSOnImage" ref="35465992"/>
 						<reference key="NSMixedImage" ref="502551668"/>
 						<string key="NSAction">submenuAction:</string>
-						<object class="NSMenu" key="NSSubmenu" id="528634158">
+						<object class="NSMenu" key="NSSubmenu" id="766645342">
 							<string key="NSTitle">Edit</string>
 							<object class="NSMutableArray" key="NSMenuItems">
 								<bool key="EncodedWithXMLCoder">YES</bool>
-								<object class="NSMenuItem" id="478798982">
-									<reference key="NSMenu" ref="528634158"/>
+								<object class="NSMenuItem" id="383230638">
+									<reference key="NSMenu" ref="766645342"/>
 									<string key="NSTitle">Cut</string>
 									<string key="NSKeyEquiv">x</string>
 									<int key="NSKeyEquivModMask">1048576</int>
@@ -165,8 +165,8 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 								</object>
-								<object class="NSMenuItem" id="277882072">
-									<reference key="NSMenu" ref="528634158"/>
+								<object class="NSMenuItem" id="1013402789">
+									<reference key="NSMenu" ref="766645342"/>
 									<string key="NSTitle">Copy</string>
 									<string key="NSKeyEquiv">c</string>
 									<int key="NSKeyEquivModMask">1048576</int>
@@ -174,8 +174,8 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 								</object>
-								<object class="NSMenuItem" id="103173367">
-									<reference key="NSMenu" ref="528634158"/>
+								<object class="NSMenuItem" id="481063422">
+									<reference key="NSMenu" ref="766645342"/>
 									<string key="NSTitle">Paste</string>
 									<string key="NSKeyEquiv">v</string>
 									<int key="NSKeyEquivModMask">1048576</int>
@@ -388,7 +388,7 @@
 																	<object class="NSTableHeaderCell" key="NSHeaderCell">
 																		<int key="NSCellFlags">75628096</int>
 																		<int key="NSCellFlags2">2048</int>
-																		<string key="NSContents">Song Name</string>
+																		<string key="NSContents">Song File Path</string>
 																		<reference key="NSSupport" ref="26"/>
 																		<object class="NSColor" key="NSBackgroundColor" id="427757763">
 																			<int key="NSColorSpace">6</int>
@@ -1010,7 +1010,7 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">copy:</string>
 						<reference key="source" ref="1014"/>
-						<reference key="destination" ref="277882072"/>
+						<reference key="destination" ref="1013402789"/>
 					</object>
 					<int key="connectionID">689</int>
 				</object>
@@ -1018,7 +1018,7 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">cut:</string>
 						<reference key="source" ref="1014"/>
-						<reference key="destination" ref="478798982"/>
+						<reference key="destination" ref="383230638"/>
 					</object>
 					<int key="connectionID">690</int>
 				</object>
@@ -1026,7 +1026,7 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">paste:</string>
 						<reference key="source" ref="1014"/>
-						<reference key="destination" ref="103173367"/>
+						<reference key="destination" ref="481063422"/>
 					</object>
 					<int key="connectionID">695</int>
 				</object>
@@ -1276,7 +1276,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="694149608"/>
 							<reference ref="713487014"/>
-							<reference ref="925469421"/>
+							<reference ref="834650732"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1712,38 +1712,38 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">642</int>
-						<reference key="object" ref="925469421"/>
+						<reference key="object" ref="834650732"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="528634158"/>
+							<reference ref="766645342"/>
 						</object>
 						<reference key="parent" ref="649796088"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">643</int>
-						<reference key="object" ref="528634158"/>
+						<reference key="object" ref="766645342"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="478798982"/>
-							<reference ref="277882072"/>
-							<reference ref="103173367"/>
+							<reference ref="383230638"/>
+							<reference ref="1013402789"/>
+							<reference ref="481063422"/>
 						</object>
-						<reference key="parent" ref="925469421"/>
+						<reference key="parent" ref="834650732"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">647</int>
-						<reference key="object" ref="478798982"/>
-						<reference key="parent" ref="528634158"/>
+						<reference key="object" ref="383230638"/>
+						<reference key="parent" ref="766645342"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">648</int>
-						<reference key="object" ref="277882072"/>
-						<reference key="parent" ref="528634158"/>
+						<reference key="object" ref="1013402789"/>
+						<reference key="parent" ref="766645342"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">649</int>
-						<reference key="object" ref="103173367"/>
-						<reference key="parent" ref="528634158"/>
+						<reference key="object" ref="481063422"/>
+						<reference key="parent" ref="766645342"/>
 					</object>
 				</object>
 			</object>

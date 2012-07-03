@@ -13,6 +13,8 @@
 @synthesize name = _name;
 @synthesize macAddress = _macAddress;
 @synthesize soundFilePath = _soundFilePath;
+@synthesize lastPlayedAt = _lastPlayedAt;
+@synthesize lastSeenAt = _lastSeenAt;
 
 - (id)init
 {
@@ -31,6 +33,8 @@
     [aCoder encodeObject:self.name forKey:@"name"];
     [aCoder encodeObject:self.macAddress forKey:@"macAddress"];
     [aCoder encodeObject:self.soundFilePath forKey:@"soundFilePath"];
+    [aCoder encodeObject:self.lastPlayedAt forKey:@"lastPlayedAt"];
+    [aCoder encodeObject:self.lastSeenAt forKey:@"lastSeenAt"];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -41,6 +45,8 @@
         self.name = [aDecoder decodeObjectForKey:@"name"];
         self.macAddress = [aDecoder decodeObjectForKey:@"macAddress"];
         self.soundFilePath = [aDecoder decodeObjectForKey:@"soundFilePath"];
+        self.lastPlayedAt = [aDecoder decodeObjectForKey:@"lastPlayedAt"];
+        self.lastSeenAt = [aDecoder decodeObjectForKey:@"lastSeenAt"];
     }
     
     return self;

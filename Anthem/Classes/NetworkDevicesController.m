@@ -17,7 +17,8 @@
 }
 
 - (void)addDevice:(PcapAddress *)deviceAddress;
-- (void)setPersonForDeviceAddress:(PcapAddress *)deviceAddress;
+- (PersonConfiguration *)configurationForDeviceAddress:(PcapAddress *)deviceAddress;
+- (BOOL)shouldAnthemForPerson:(PersonConfiguration *)personConfig;
 
 @end
 
@@ -26,6 +27,7 @@
 @synthesize allDevices = _allDevices;
 @synthesize networkInterfaces = _networkInterfaces;
 @synthesize configurationController = _configurationController;
+@synthesize minutesBetweenAnthems = _minutesBetweenAnthems;
 
 - (id)init
 {
@@ -94,8 +96,6 @@
         //don't have it yet so add it and set the last seen and first seen times to now
         [deviceAddress setLastSeenAt:currentTime];
         [deviceAddress setFirstSeenAt:currentTime];
-        [self setPersonForDeviceAddress:deviceAddress];
-        
         [[self allDevices] addObject:deviceAddress];
         
     }
@@ -105,18 +105,37 @@
         PcapAddress *existingAddress = [[self allDevices] objectAtIndex:deviceIdx];
         [existingAddress setLastSeenAt:currentTime];
     }
+    
+    //See if there is a configuration for the device and if we should anthem
+    PersonConfiguration *config = [self configurationForDeviceAddress:deviceAddress];
+    [config setLastSeenAt:currentTime];
+    if(nil != config && YES == [self shouldAnthemForPerson:config])
+    {
+        //Play their Anthem
+        NSSound *anthem = [[NSSound alloc] initWithContentsOfFile:[config soundFilePath] byReference:YES];
+        [anthem play];
+        
+        //Mark them as played
+        [config setLastPlayedAt:currentTime];
+    }
 }
 
-- (void)setPersonForDeviceAddress:(PcapAddress *)deviceAddress
+- (PersonConfiguration *)configurationForDeviceAddress:(PcapAddress *)deviceAddress
 {
-    //Get any configurations with the device address
     NSPredicate *addressPredicate = [NSPredicate predicateWithFormat:@"%@ LIKE[c] macAddress"]; 
     NSArray *configurations = [[self.configurationController configurations] filteredArrayUsingPredicate:addressPredicate];
     
     if([configurations count] > 0)
     {
-        [deviceAddress setPerson:[[configurations objectAtIndex:0] name]];
+        return [configurations objectAtIndex:0];
     }
+    
+    return nil;
+}
+
+- (BOOL)shouldAnthemForPerson:(PersonConfiguration *)personConfig
+{
+    return [[NSDate date] timeIntervalSinceDate:personConfig.lastPlayedAt] > self.minutesBetweenAnthems.intValue * 60;
 }
 
 

@@ -15,7 +15,6 @@
 @synthesize MACAddress = _MACAddress;
 @synthesize lastSeenAt = _lastSeenAt;
 @synthesize firstSeenAt = _firstSeenAt;
-@synthesize person = _person;
 
 - (id)init
 {

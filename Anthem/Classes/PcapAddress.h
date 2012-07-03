@@ -15,6 +15,5 @@
 @property (nonatomic, retain) NSString *ip;
 @property (nonatomic, retain) NSDate *lastSeenAt;
 @property (nonatomic, retain) NSDate *firstSeenAt;
-@property (nonatomic, retain) NSString *person;
 
 @end

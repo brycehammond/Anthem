@@ -16,5 +16,6 @@
 @property (nonatomic, retain) IBOutlet NSMutableArray *allDevices;
 @property (nonatomic, retain) IBOutlet NSMutableArray *networkInterfaces;
 @property (nonatomic, weak) IBOutlet ConfigurationController *configurationController;
+@property (nonatomic, assign) IBOutlet NSNumber *minutesBetweenAnthems;
 
 @end
