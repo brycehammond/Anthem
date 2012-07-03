@@ -13,9 +13,9 @@
 @class ConfigurationController;
 @interface NetworkDevicesController : NSObject <PacketSnifferDelegate> 
 
-@property (nonatomic, retain) IBOutlet NSMutableArray *allDevices;
-@property (nonatomic, retain) IBOutlet NSMutableArray *networkInterfaces;
+@property (nonatomic, retain) NSMutableArray *allDevices;
+@property (nonatomic, retain) NSMutableArray *networkInterfaces;
 @property (nonatomic, weak) IBOutlet ConfigurationController *configurationController;
-@property (nonatomic, assign) IBOutlet NSNumber *minutesBetweenAnthems;
+@property (nonatomic, assign) NSNumber *minutesBetweenAnthems;
 
 @end
