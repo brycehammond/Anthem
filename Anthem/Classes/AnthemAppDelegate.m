@@ -22,7 +22,7 @@
 
 - (void)applicationWillResignActive:(NSNotification *)notification
 {
-    
+    [self.configController saveConfigurations];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification

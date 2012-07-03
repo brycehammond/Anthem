@@ -60,6 +60,8 @@
             }
         }
         
+        self.minutesBetweenAnthems = [NSNumber numberWithInt:1];
+        
         [self setAllDevices:[NSMutableArray array]]; 
     }
     
@@ -79,8 +81,6 @@
 - (void)packetSniffer:(PacketSniffer *)sniffer
        didSniffPacket:(PcapPacket *)packet
 {
-    NSLog(@"dest %@ : %@", [[packet destinationAddress] MACAddress], [[packet destinationAddress] ip]);
-    NSLog(@"src %@ : %@", [[packet sourceAddress] MACAddress], [[packet sourceAddress] ip]);
     [self willChangeValueForKey:@"allDevices"];
     [self addDevice:[packet sourceAddress]];
     [self addDevice:[packet destinationAddress]];
@@ -112,8 +112,15 @@
     if(nil != config && YES == [self shouldAnthemForPerson:config])
     {
         //Play their Anthem
-        NSSound *anthem = [[NSSound alloc] initWithContentsOfFile:[config soundFilePath] byReference:YES];
-        [anthem play];
+        if([[NSFileManager defaultManager] fileExistsAtPath:[config soundFilePath]])
+        {
+            NSSound *anthem = [[NSSound alloc] initWithContentsOfFile:[config soundFilePath] byReference:YES];
+            [anthem play];
+        }
+        else 
+        {
+            NSLog(@"File does not exist at path %@",[config soundFilePath]);
+        }
         
         //Mark them as played
         [config setLastPlayedAt:currentTime];
@@ -122,7 +129,7 @@
 
 - (PersonConfiguration *)configurationForDeviceAddress:(PcapAddress *)deviceAddress
 {
-    NSPredicate *addressPredicate = [NSPredicate predicateWithFormat:@"%@ LIKE[c] macAddress"]; 
+    NSPredicate *addressPredicate = [NSPredicate predicateWithFormat:@"%@ LIKE[c] macAddress",[deviceAddress MACAddress]]; 
     NSArray *configurations = [[self.configurationController configurations] filteredArrayUsingPredicate:addressPredicate];
     
     if([configurations count] > 0)
@@ -135,7 +142,14 @@
 
 - (BOOL)shouldAnthemForPerson:(PersonConfiguration *)personConfig
 {
-    return [[NSDate date] timeIntervalSinceDate:personConfig.lastPlayedAt] > self.minutesBetweenAnthems.intValue * 60;
+    if(nil == personConfig.lastPlayedAt)
+    {
+        
+        return YES;
+    }
+    
+    NSTimeInterval timeInternalSinceLastPlayed = [[NSDate date] timeIntervalSinceDate:personConfig.lastPlayedAt];
+    return  timeInternalSinceLastPlayed > self.minutesBetweenAnthems.intValue * 60;
 }
 
 
