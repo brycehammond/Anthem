@@ -73,7 +73,7 @@
 {
     //If any values changed then we should re-save the configurations
     
-    [self saveConfigurations];
+    [self saveConfigurationsInBackground];
     
     return YES;
 }
@@ -83,7 +83,7 @@
     if([keyPath isEqualToString:@"configurations"])
     {
         //The array changed so time to trigger a save
-        [self saveConfigurations];
+        [self saveConfigurationsInBackground];
     }
 }
 
