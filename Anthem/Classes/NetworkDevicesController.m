@@ -28,6 +28,7 @@
 @synthesize networkInterfaces = _networkInterfaces;
 @synthesize configurationController = _configurationController;
 @synthesize minutesBetweenAnthems = _minutesBetweenAnthems;
+@synthesize minutesBetweenDisplayField = _currentTime;
 
 - (id)init
 {
@@ -60,7 +61,7 @@
             }
         }
         
-        self.minutesBetweenAnthems = [NSNumber numberWithInt:1];
+        self.minutesBetweenAnthems = 60;
         
         [self setAllDevices:[NSMutableArray array]]; 
     }
@@ -70,7 +71,7 @@
 
 - (void)awakeFromNib
 {
-    
+     self.minutesBetweenAnthems = 60;
 }
 
 - (void)dealloc
@@ -149,8 +150,26 @@
     }
     
     NSTimeInterval timeInternalSinceLastPlayed = [[NSDate date] timeIntervalSinceDate:personConfig.lastPlayedAt];
-    return  timeInternalSinceLastPlayed > self.minutesBetweenAnthems.intValue * 60;
+    return  timeInternalSinceLastPlayed > self.minutesBetweenAnthems * 60;
 }
 
+#pragma mark -
+#pragma mark Property overrides
+
+- (void)setMinutesBetweenAnthems:(NSInteger)minutes
+{
+    [self willChangeValueForKey:@"minutesBetweenAnthems"];
+    _minutesBetweenAnthems = minutes;
+    NSInteger hours = _minutesBetweenAnthems / 60;
+    NSInteger mins = _minutesBetweenAnthems % 60;
+    if(hours < 1)
+    {
+        self.minutesBetweenDisplayField.stringValue = [NSString stringWithFormat:@"%im",mins];
+    }
+    else {
+        self.minutesBetweenDisplayField.stringValue = [NSString stringWithFormat:@"%ih %im",hours, mins];
+    }
+    [self didChangeValueForKey:@"minutesBetweenAnthems"];
+}
 
 @end
