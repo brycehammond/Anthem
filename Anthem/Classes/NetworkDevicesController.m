@@ -13,7 +13,7 @@
 
 @interface NetworkDevicesController ()
 {
-    __weak PacketSniffer *_sniffer;
+    __unsafe_unretained PacketSniffer *_sniffer;
 }
 
 - (void)addDevice:(PcapAddress *)deviceAddress;

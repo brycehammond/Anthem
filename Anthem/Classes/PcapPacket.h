@@ -15,8 +15,8 @@
     PcapAddress *_sourceAddress;
 }
 
-@property (nonatomic, retain) PcapAddress *destinationAddress;
-@property (nonatomic, retain) PcapAddress *sourceAddress;
+@property (nonatomic, strong) PcapAddress *destinationAddress;
+@property (nonatomic, strong) PcapAddress *sourceAddress;
 
 - (id)initWithPacket:(const u_char *)packet;
 

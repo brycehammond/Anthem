@@ -11,9 +11,9 @@
 
 @interface PcapAddress : NSObject
 
-@property (nonatomic, retain) NSString *MACAddress;
-@property (nonatomic, retain) NSString *ip;
-@property (nonatomic, retain) NSDate *lastSeenAt;
-@property (nonatomic, retain) NSDate *firstSeenAt;
+@property (nonatomic, strong) NSString *MACAddress;
+@property (nonatomic, strong) NSString *ip;
+@property (nonatomic, strong) NSDate *lastSeenAt;
+@property (nonatomic, strong) NSDate *firstSeenAt;
 
 @end

@@ -13,10 +13,10 @@
 @class ConfigurationController;
 @interface NetworkDevicesController : NSObject <PacketSnifferDelegate> 
 
-@property (nonatomic, retain) NSMutableArray *allDevices;
-@property (nonatomic, retain) NSMutableArray *networkInterfaces;
-@property (nonatomic, weak) IBOutlet ConfigurationController *configurationController;
+@property (nonatomic) NSMutableArray *allDevices;
+@property (nonatomic) NSMutableArray *networkInterfaces;
+@property (nonatomic, unsafe_unretained) IBOutlet ConfigurationController *configurationController;
 @property (nonatomic, assign) NSInteger minutesBetweenAnthems;
-@property (weak) IBOutlet NSTextField *minutesBetweenDisplayField;
+@property (nonatomic, unsafe_unretained) IBOutlet NSTextField *minutesBetweenDisplayField;
 
 @end

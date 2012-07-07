@@ -12,7 +12,7 @@
 @class ConfigurationController;
 @interface AnthemAppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
-@property (nonatomic, weak) IBOutlet ConfigurationController *configController;
+@property (unsafe_unretained) IBOutlet NSWindow *window;
+@property (nonatomic, unsafe_unretained) IBOutlet ConfigurationController *configController;
 
 @end

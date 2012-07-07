@@ -10,7 +10,7 @@
 
 @interface ConfigurationController : NSObject <NSTableViewDelegate>
 
-@property (nonatomic, retain) NSMutableArray *configurations;
+@property (nonatomic) NSMutableArray *configurations;
 - (void)saveConfigurations;
 - (void)saveConfigurationsInBackground;
 

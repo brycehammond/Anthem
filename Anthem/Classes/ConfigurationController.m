@@ -57,7 +57,7 @@
 - (void)saveConfigurationsInBackground
 {
     //saves the current configurations to the 
-    __weak ConfigurationController *weakSelf = self;
+    __unsafe_unretained ConfigurationController *weakSelf = self;
     
     dispatch_async(_savingQueue, ^{
         [weakSelf saveConfigurations];
